@@ -17,6 +17,11 @@ function carousel() {
   if (counter >= slides.length){
     counter = 0;
   }
+
+  if (counter <= -1){
+    counter = slides.length -1;
+  }
+
   slides.forEach(function (slide) {
     slide.style.transform = `translateX(-${counter * 100}%)`;
   });
