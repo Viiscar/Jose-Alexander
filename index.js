@@ -11,16 +11,9 @@ slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
 
-prevBtn.style.display = "none";
-
 //Carousel at work 
 function carousel() {
 
-  if (counter > 0) {
-    prevBtn.style.display = "block";
-  } else {
-    prevBtn.style.display = "none";
-  }
   if (counter >= slides.length){
     counter = 0;
   }
@@ -29,13 +22,13 @@ function carousel() {
   });
 }
 
-//Event on buttons click
-nextBtn.addEventListener("click", function () {
+//Slider buttons Onclick
+function next(){
   counter++;
   carousel();
-});
+}
 
-prevBtn.addEventListener("click", function () {
+function prev(){
   counter--;
   carousel();
-});
+}
