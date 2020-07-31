@@ -2,6 +2,13 @@ ul {
     list-style: none;
 }
 
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 /*  global classes */
   
   main {
@@ -58,6 +65,24 @@ Slider
 
 #next{
   clip-path: polygon(45% 23%, 100% 50%, 48% 78%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+/* 
+==============
+Portfolio
+==============
+ */
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
