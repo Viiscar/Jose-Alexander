@@ -7,19 +7,60 @@
   font-family: Avenir;
 }
 
-ul {
-    list-style: none;
+body{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-footer{
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: center;
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
 
 .active{
   color: #F8981C;
+}
+
+.logo{
+  width: 350px;
+}
+
+nav{
+  height: 100vh;
+}
+
+ul{
+    list-style: none;
+    font-size: 2rem;
+}
+
+#portfolio{
+  display: none;
+}
+
+.navLinks{
+  margin-top: 5rem;
+}
+
+li{
+  padding: 4px;
+}
+
+.slider-container-bis{
+  height: 100vh;
+  margin-top: 5rem;
 }
 
 /*  global classes */

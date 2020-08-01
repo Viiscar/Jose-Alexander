@@ -10,11 +10,11 @@
 
     <body>
         <nav>
-            <div><img src="Images/logo.jpg" /></div>
-            <ul>
+            <div><img src="Images/logo.jpg" class="logo" /></div>
+            <ul class= "navLinks">
                 <li><a href="index.html" class="active">HOME</a></li>
                 <li><a onclick="showPortfolio()" >PORTFOLIO</a></li>
-                <ul>
+                <ul id="portfolio">
                     <li><a href="wedding.html">wedding</a></li>
                     <li><a href="nature.html">nature</a></li>
                     <li><a href="party.html">party</a></li>
@@ -24,7 +24,7 @@
                 <li><a href="contact.html">CONTACT</a><li>
             </ul>
         </nav>
-        <div>
+        <div class="slider-container-bis">
             <div class="slider-container">
                 <div class="slide">
                     <img src="Images/Home/1.png" class="slide-img" alt="" />
@@ -45,10 +45,8 @@
                 <a onclick="next()" class="sliderButtons" id="next"></a>
             </div>
         </div>
-        <footer>
-            Jose Alexander
-        </footer>
         <script src= "index.js"></script>
+        <script src="global.js"></script>
     </body>
 
 </html>

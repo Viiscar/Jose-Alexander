@@ -37,8 +37,3 @@ function prev(){
   counter--;
   carousel();
 }
-
-//Show portfolio sections on nav
-function showPortfolio(){
-  console.log("portfolio")
-}
