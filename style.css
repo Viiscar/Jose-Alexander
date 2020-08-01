@@ -43,7 +43,11 @@ nav{
 
 ul{
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
+}
+
+li{
+  padding: 4px;
 }
 
 #portfolio{
@@ -51,15 +55,6 @@ ul{
 }
 
 .navLinks{
-  margin-top: 5rem;
-}
-
-li{
-  padding: 4px;
-}
-
-.slider-container-bis{
-  height: 100vh;
   margin-top: 5rem;
 }
 
@@ -78,7 +73,7 @@ Slider
 */
 
 .slider-container {
-  width: 60vw;
+  width: 80vw;
   margin: 0 auto;
   height: 40vh;
   max-width: 80rem;
@@ -90,6 +85,12 @@ Slider
   align-items: center;
   justify-content: space-between;
 }
+
+.slider-container-bis{
+  height: 100vh;
+  margin-top: 5rem;
+}
+
 .slide {
   position: absolute;
   width: 100%;
@@ -101,12 +102,13 @@ Slider
 }
 .slide-img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 .sliderButtons{
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   margin: 5px;
   background-color: #F8981C;
   z-index: 7;
@@ -136,6 +138,16 @@ Portfolio
   padding: 20px;
   font-size: 30px;
   text-align: center;
+}
+
+/* 
+===========
+Contact
+===========
+ */
+
+.container{
+  margin-top: 6rem;
 }
 
 @media screen and (min-width: 576px) {
