@@ -58,6 +58,11 @@ li{
   margin-top: 5rem;
 }
 
+.title{
+  font-size: 1.5rem;
+  color: #F8981C;
+}
+
 /*  global classes */
   
   main {
@@ -146,10 +151,49 @@ Contact
 ===========
  */
 
-.container{
+.formContainer{
   margin-top: 6rem;
+  margin-left: 8rem;
+  margin-right:6rem;
+  font-size: 1.3rem;
+  width: 50vw;
 }
 
+/* form{
+  width: 50vw;
+} */
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+input, textarea {
+  border: 1px black solid;
+  font-size: 1.3rem;
+}
+
+textarea{
+  height: auto;
+}
+
+.formElement{
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
+.submit{
+  background-color: #F8981C;
+  font-size: 1.3rem;
+
+}
+
+/* 
+==========
+Responsive
+==========
+*/
 @media screen and (min-width: 576px) {
   .slider-container {
     height: 45vh;

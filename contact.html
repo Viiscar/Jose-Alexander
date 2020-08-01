@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        
+         -->
         <!-- CSS stylesheet -->
 	    <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -30,33 +30,33 @@
                 <li><a href="contact.html" class="active">CONTACT</a><li>
             </ul>
         </nav>
-        <div class="container">
-            <p>CONTACT</p>
-            <form action="/action_page.php">
-                <div class="form-group">
-                    <label for="name*">Email:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
+        <div class="formContainer">
+            <p class="title">CONTACT</p>
+            <form>
+                <div class="formElement">
+                    <label for="name*">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" name="name">
+                    <!-- <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div> -->
                 </div>
-                <div class="form-group">
+                <div class="formElement">
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                  <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <input type="email" id="email" placeholder="Enter email" name="email">
+                  <!-- <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div> -->
                 </div>
-                <div class="form-group">
+                <div class="formElement">
                   <label for="subject">Subject:</label>
-                  <input type="text" class="form-control" id="subject" placeholder="Enter subject" name="pswd">
-                  <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Please fill out this field.</div>
+                  <input type="text" id="subject" placeholder="Enter subject" name="pswd">
+                  <!-- <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div> -->
                 </div>
-                <div class="form-group">
-                    <label for="message">Message*</label>
-                    <textarea class="form-control" rows="5" id="comment" placeholder="Please include : locations of the project, amount of images needed, intended usage of the images, timeframe for project completion"></textarea>
+                <div class="formElement">
+                    <label for="message">Message:</label>
+                    <textarea rows="10" id="comment" placeholder="Please include : locations of the project, amount of images needed, intended usage of the images, timeframe for project completion"></textarea>
                     <!-- $('textarea').attr('value', 'This is a line \nthis should be a new line')           -->
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="submit" type="submit">Submit</button>
               </form>
         </div>
     </body>
