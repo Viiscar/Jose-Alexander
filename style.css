@@ -39,6 +39,9 @@ a:active {
 
 nav{
   height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1rem;
 }
 
 ul{
@@ -138,6 +141,11 @@ Portfolio
   grid-template-columns: auto auto;
   padding: 10px;
 }
+
+.grid-container img{
+  width: 600px;
+  height: auto;
+}
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
@@ -188,6 +196,25 @@ textarea{
   font-size: 1.3rem;
 
 }
+
+/* 
+==========
+ABOUT
+=========
+ */
+
+ .photographer{
+   float: right;
+   height: 30vh;
+   width: auto;
+   margin-left: 1rem;
+   margin-bottom: 1rem;
+   border-radius: 0.5rem;
+ }
+
+ .aboutText{
+   text-align: justify;
+ }
 
 /* 
 ==========
