@@ -34,7 +34,7 @@
             <p class="title">CONTACT</p>
             <form>
                 <div class="formElement">
-                    <label for="name*">Name:</label>
+                    <label for="name">Name:</label>
                     <input type="text" id="name" placeholder="Enter your name" name="name">
                     <!-- <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div> -->
@@ -53,7 +53,7 @@
                 </div>
                 <div class="formElement">
                     <label for="message">Message:</label>
-                    <textarea rows="10" id="comment" placeholder="Please include : locations of the project, amount of images needed, intended usage of the images, timeframe for project completion"></textarea>
+                    <textarea rows="10" id="text" placeholder="Please include : locations of the project, amount of images needed, intended usage of the images, timeframe for project completion"></textarea>
                     <!-- $('textarea').attr('value', 'This is a line \nthis should be a new line')           -->
                 </div>
                 <button class="submit" type="submit">Submit</button>
@@ -61,4 +61,30 @@
         </div>
     </body>
     <script src="global.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $("form").on("submit", e => {
+        e.preventDefault();
+
+        const name = $("#name").val().trim();
+        const email = $("#email").val().trim();
+        const subject = $("#subject").val().trim();
+        const text = $("#text").val().trim();
+
+        const data = {
+          name,
+          email,
+          subject,
+          text
+        };
+
+        $.post("/email", data)
+          .then(() => {
+            window.location.href = "/email/sent";
+          })
+          .catch(() => {
+            window.location.href = "/error";
+          });
+      });
+    </script>
 </html>
