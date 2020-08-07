@@ -4,7 +4,11 @@ const mailGun = require('nodemailer-mailgun-transport');
 const app = express();
 const path = require('path');
 
-const PORT = 8080;
+//const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+
+// Serve Static Assets
+app.use(express.static('public'));
 
 //Data parsing
 app.use(express.urlencoded({
@@ -30,7 +34,7 @@ app.post('/email', (req, res) =>{
 app.use(express.urlencoded({extended: false}));
 
 //Routing
-app.get('/index.html' || '/', (req, res) => {
+app.get('/public/index.html' || '/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -58,7 +62,7 @@ app.get('/contact.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
-app.listen(PORT, () => console.log('Server is starting on PORT, ', 8080));
+app.listen(PORT, () => console.log('Server is starting on PORT, ', PORT));
 
 // Auth needed for mailGun
 const auth = {
@@ -75,7 +79,7 @@ const transporter = nodemailer.createTransport(mailGun(auth));
 const sendMail = (email, subject, text) => {
     const mailOptions ={
         from: email,
-        to: 'fanchleroux@tutanota.com',
+        to: 'receiver email',
         subject: subject,
         text: text
     }
