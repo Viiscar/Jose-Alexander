@@ -1,3 +1,9 @@
+/*
+=============== 
+Global
+===============
+*/
+
 @font-face {
   font-family: Avenir;
   src: url(/Font/AvenirLTStd-Medium.otf);
@@ -7,11 +13,11 @@
   font-family: Avenir;
 }
 
-body{
+/* body{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
+} */
 
 a {
   color: inherit;
@@ -32,7 +38,14 @@ a:active {
 
 .logo{
   width: 350px;
+  margin-left: 1.5rem;
 }
+
+/*
+=============== 
+Nav
+===============
+*/
 
 nav{
   height: 100vh;
@@ -56,20 +69,13 @@ li{
 
 .navLinks{
   margin-top: 5rem;
+  margin-left: 2rem;
 }
 
 .title{
   font-size: 1.5rem;
   color: #F8981C;
 }
-
-/*  global classes */
-  
-  main {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
 
 /*
 =============== 
@@ -83,7 +89,6 @@ Slider
   height: 40vh;
   max-width: 80rem;
   position: relative;
-  border-radius: 0.5rem;
   overflow: hidden;
   margin-top: 4rem;
   display: flex;
@@ -149,6 +154,15 @@ Portfolio
   text-align: center;
 }
 
+.grid-item img{
+  object-fit: scale-down;
+}
+
+.index-grid-container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 /* 
 ===========
 Contact
@@ -162,10 +176,6 @@ Contact
   font-size: 1.3rem;
   width: 50vw;
 }
-
-/* form{
-  width: 50vw;
-} */
 
 label {
   display: inline-block;
@@ -205,7 +215,6 @@ ABOUT
    width: auto;
    margin-left: 1rem;
    margin-bottom: 1rem;
-   border-radius: 0.5rem;
  }
 
  .aboutText{
@@ -230,5 +239,56 @@ Responsive
 @media screen and (min-width: 992px) {
   .slider-container {
     height: 65vh;
+  }
+}
+
+@media screen and (max-width: 1668px) {
+
+  .index-grid-container{
+    display: block;
+  }
+
+  nav{
+    display: flex;
+    height: 10vh;
+    position: inherit;
+    justify-content: space-around;
+  }
+
+  .navLinks{
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding-top: 1.2rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* .contactAbout{
+    background-color: tomato;
+    transform: translateX(-9.5rem);
+  } */
+
+  #portfolio{
+    /* display: flex;
+    flex-direction: row; */
+    z-index: 7;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    margin-top: 2rem;
+    transform: translateX(-8rem);
+  }
+
+  #portfolio li:last-child{
+    background-color: white;
+  }
+  #portfolio li{
+    padding: 1.8px;
+  }
+}
+
+@media screen and (max-width: 1032px) {
+  ul{
+    list-style: none;
+    font-size: 1.2rem;
   }
 }

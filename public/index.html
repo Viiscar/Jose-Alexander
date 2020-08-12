@@ -9,40 +9,42 @@
     </head>
 
     <body>
-        <nav>
-            <div><img src="Images/logo.jpg" class="logo" /></div>
-            <ul class= "navLinks">
-                <li><a href="index.html" class="active">HOME</a></li>
-                <li><a onclick="showPortfolio()" >PORTFOLIO</a></li>
-                <ul id="portfolio">
-                    <li><a href="wedding.html">wedding</a></li>
-                    <li><a href="nature.html">nature</a></li>
-                    <li><a href="party.html">party</a></li>
-                    <li><a href="quinceaneros.html">quinceañeros</a></li>
+        <div class="index-grid-container">
+            <nav class="index-grid-item">
+                <div><img src="Images/logo.jpg" class="logo" /></div>
+                <ul class= "navLinks">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a onclick="showPortfolio()" >PORTFOLIO</a></li>
+                    <ul id="portfolio">
+                        <li><a href="wedding.html">wedding</a></li>
+                        <li><a href="nature.html">nature</a></li>
+                        <li><a href="party.html">party</a></li>
+                        <li><a href="quinceaneros.html">quinceañeros</a></li>
+                    </ul>
+                    <li class="contactAbout"><a href="about.html">ABOUT</a></li>
+                    <li class="contactAbout"><a href="contact.html">CONTACT</a><li>
                 </ul>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a><li>
-            </ul>
-        </nav>
-        <div class="slider-container-bis">
-            <div class="slider-container">
-                <div class="slide">
-                    <img src="Images/Home/1.png" class="slide-img" alt="" />
+            </nav>
+            <div class="index-grid-item" class="slider-container-bis">
+                <div class="slider-container">
+                    <div class="slide">
+                        <img src="Images/Home/1.png" class="slide-img" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="Images/Home/2.png" class="slide-img" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="Images/Home/3.png" class="slide-img" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="Images/Home/4.png" class="slide-img" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="Images/Home/5.png" class="slide-img" alt="" />
+                    </div>
+                    <a onclick="prev()" class="sliderButtons" id="prev"></a>
+                    <a onclick="next()" class="sliderButtons" id="next"></a>
                 </div>
-                <div class="slide">
-                    <img src="Images/Home/2.png" class="slide-img" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="Images/Home/3.png" class="slide-img" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="Images/Home/4.png" class="slide-img" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="Images/Home/5.png" class="slide-img" alt="" />
-                </div>
-                <a onclick="prev()" class="sliderButtons" id="prev"></a>
-                <a onclick="next()" class="sliderButtons" id="next"></a>
             </div>
         </div>
         <script src= "/js/index.js"></script>
