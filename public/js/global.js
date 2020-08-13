@@ -45,3 +45,13 @@ function changeLogo(wind991px) {
 var wind991px = window.matchMedia("(max-width: 991px)")
 changeLogo(wind991px) // Call listener function at run time
 wind991px.addListener(changeLogo) // Attach listener function on state changes
+
+//Small devices Menu
+function menuIcon(){
+  console.log("ok")
+  // let navLinks = document.getElementById("navLinks");
+  // navLinks.style.display="flex";
+  // navLinks.style.flexDirection="column"
+
+}
+menuIcon()
