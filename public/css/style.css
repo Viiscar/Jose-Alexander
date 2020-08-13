@@ -280,6 +280,46 @@ Responsive
   #portfolio li{
     padding: 1.8px;
   }
+
+  .formContainer{
+    margin-top: 6rem;
+    margin-left: 8rem;
+    margin-right:6rem;
+    font-size: 1.3rem;
+    width: 70vw;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  
+}
+
+@media screen and (max-width: 1384px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+
+  .grid-container img{
+    width: 500px;
+    height: auto;
+  }
+  
+}
+
+@media screen and (max-width: 1093px) {
+
+  .grid-container img{
+    width: 400px;
+    height: auto;
+  }
+  
 }
 
 @media screen and (max-width: 991px) {
@@ -287,8 +327,22 @@ Responsive
     width: 100px;
     margin-left: 1.5rem;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+  }
+
+  .grid-container img{
+    width: 550px;
+    height: auto;
+  }
 }
 
-/* @media screen and (max-width: 728px) {
-
-} */
+@media screen and (max-width: 733px) {
+  .grid-container img{
+    width: 400px;
+    height: auto;
+  }
+}
