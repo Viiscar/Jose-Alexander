@@ -273,7 +273,8 @@ Responsive
     padding-bottom: 1rem;
     padding-left: 0.5rem;
     margin-top: 2rem;
-    transform: translateX(-8rem);
+    transform: translateX(-10rem);
+    text-align: center;
   }
 
   #portfolio li{
@@ -384,11 +385,27 @@ Responsive
     transition: 0.4s;
   }
   
-  nav{
-    display: flex;
-    height: 10vh;
+  .responsive{
+    /* display: flex; */
+    /* height: 10vh;
     position: inherit;
-    justify-content: space-between;
+    justify-content: space-between; */
+    background-color: white;
+    height: 100%;
   }
+
+  /* #navLinks.responsive {
+    position: relative;
+  }
+  /* nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  } */
+  #navLinks.responsive a {
+    float: none;
+    /* display: block; */
+    text-align: center;
+  } */
 
 }
