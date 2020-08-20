@@ -10,12 +10,12 @@
 
     <body>
       <div class="index-grid-container">
-        <nav>
+        <nav id="navContainer" class="index-grid-item">
           <div id="logoContainer"><img src="Images/logo.jpg" id="logo" /></div>
           <ul id= "navLinks">
                 <li><a href="index.html">HOME</a></li>
                 <li><a onclick="showPortfolio()" >PORTFOLIO</a></li>
-                <ul id="portfolio">
+                <ul id="portfolio" class="portfolio">
                     <li><a href="wedding.html">wedding</a></li>
                     <li><a href="nature.html">nature</a></li>
                     <li><a href="events.html">events</a></li>
@@ -24,6 +24,11 @@
                 <li class="contactAbout"><a href="about.html">ABOUT</a></li>
                 <li class="contactAbout"><a href="contact.html" class="active">CONTACT</a><li>
             </ul>
+            <div href="javascript:void(0)" id="menuIcon" onclick="menuIcon()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div> 
         </nav>
         <div class="formContainer">
             <p class="title">CONTACT</p>
