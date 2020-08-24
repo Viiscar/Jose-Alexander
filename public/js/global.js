@@ -4,18 +4,18 @@ function showPortfolio(){
     portfolio.style.display = "block";
 
     //set windows width to call function translateX
-   let wind1668px = window.matchMedia("(max-width: 1668px)")
-    translateX(wind1668px); // Call listener function at run time
-    wind1668px.addListener(translateX) // Attach listener function on state changes
+   let wind1270px = window.matchMedia("(max-width: 1270px)")
+    translateX(wind1270px); // Call listener function at run time
+    wind1270px.addListener(translateX) // Attach listener function on state changes
   }
 
 //Tranlates Contact & About to the left at 1668px window width
-function translateX(wind1668px) {
+function translateX(wind1270px) {
 
   let contactAbout = document.getElementsByClassName("contactAbout");
   let navLinks = document.getElementById("navLinks");
 
-  if (wind1668px.matches) { // If media query matches
+  if (wind1270px.matches) { // If media query matches
     contactAbout[0].style.transform= "translateX(-11.5rem)";
     contactAbout[1].style.transform= "translateX(-11.5rem)";
     navLinks.style.transform= "translateX(7rem)";
