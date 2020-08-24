@@ -1,15 +1,21 @@
 //Show portfolio sections on nav
 function showPortfolio(){
+  //If it's a small device do nothing
+  if(window.matchMedia("(max-width: 733px)").matches){
+
+  }else{
     let portfolio = document.getElementById("portfolio");
     portfolio.style.display = "block";
 
-    //set windows width to call function translateX
+   //set windows width to call function translateX
    let wind1270px = window.matchMedia("(max-width: 1270px)")
     translateX(wind1270px); // Call listener function at run time
     wind1270px.addListener(translateX) // Attach listener function on state changes
   }
+    
+}
 
-//Tranlates Contact & About to the left at 1668px window width
+//Tranlates Contact & About to the left at 1270px window width
 function translateX(wind1270px) {
 
   let contactAbout = document.getElementsByClassName("contactAbout");
@@ -65,7 +71,4 @@ function menuIcon(){
     navContainer.className = "index-grid-item";
     portfolio.classList.add("portfolio")
   }
-
 }
-
-//disable portfolio click mobile
