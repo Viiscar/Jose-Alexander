@@ -4,7 +4,7 @@ function showPortfolio(){
     portfolio.style.display = "block";
 
     //set windows width to call function translateX
-    var wind1668px = window.matchMedia("(max-width: 1668px)")
+   let wind1668px = window.matchMedia("(max-width: 1668px)")
     translateX(wind1668px); // Call listener function at run time
     wind1668px.addListener(translateX) // Attach listener function on state changes
   }
@@ -68,4 +68,4 @@ function menuIcon(){
 
 }
 
-//menu hover machin truc
+//disable portfolio click mobile
