@@ -243,7 +243,17 @@ Responsive
   }
 }
 
+@media screen and (max-width: 1680px) {
+  .slider-container {
+    width: 60vw;
+  }
+}
+
 @media screen and (max-width: 1270px) {
+
+  .slider-container {
+    width: 80vw;
+  }
 
   .index-grid-container{
     display: block;
