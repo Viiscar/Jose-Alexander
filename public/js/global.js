@@ -47,10 +47,20 @@ function changeLogo(wind991px) {
     logoContainer.innerHTML='<img src="Images/logo.jpg" id="logo" />';
   }
 }
+
 //set windows width to call function changeLogo
 var wind991px = window.matchMedia("(max-width: 991px)")
 changeLogo(wind991px) // Call listener function at run time
 wind991px.addListener(changeLogo) // Attach listener function on state changes
+
+//Portfolio nav links are visible at 1270px width and more for portfolio paths
+if(window.matchMedia("(min-width: 1270px)").matches){
+  let currentPath = window.location.pathname;
+  if(currentPath === "/wedding.html" || currentPath === "/nature.html" || currentPath === "/events.html" || currentPath === "/quinceaneros.html"){
+    let portfolio = document.getElementById("portfolio");
+    portfolio.style.display = "block";
+  }
+}
 
 //Small devices Menu
 function menuIcon(){
