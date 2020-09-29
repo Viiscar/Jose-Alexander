@@ -72,8 +72,8 @@ app.listen(PORT, () => console.log('Server is starting on PORT, ', PORT));
 // Auth needed for mailGun
 const auth = {
     auth: {
-        api_key: '72a143c245c3c9b1fe326c406401c22d-f7d0b107-0262f7cf',
-        domain: 'sandbox177b0848b4934d4aa86487b747651250.mailgun.org'
+        api_key: 'MAILGUN_API',
+        domain: 'MAILGUN_DOMAIN'
     }
 }
 
