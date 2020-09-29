@@ -233,6 +233,18 @@ ABOUT
    text-align: justify;
  }
 
+/*
+
+==============
+Page not found
+==============
+*/
+.error{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 /* 
 ==========
 Responsive

@@ -62,6 +62,11 @@ app.get('/contact.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
+// Route not found (404)
+app.use(function(req, res, next) {
+  res.status(404).sendFile(path.join(__dirname, 'public/error404.html'));
+});
+
 app.listen(PORT, () => console.log('Server is starting on PORT, ', PORT));
 
 // Auth needed for mailGun
@@ -83,7 +88,7 @@ const sendMail = (email, subject, text) => {
         subject: subject,
         text: text
     }
-    
+
     transporter.sendMail(mailOptions, (err, data) => {
         if (err) {
             return console.log("'Error occurs'");
