@@ -1,3 +1,4 @@
+//run "eval $(cat .env.development) node server.js" to access env variables
 const express = require('express');
 const nodemailer = require('nodemailer');
 const mailGun = require('nodemailer-mailgun-transport');
@@ -72,8 +73,8 @@ app.listen(PORT, () => console.log('Server is starting on PORT, ', PORT));
 // Auth needed for mailGun
 const auth = {
     auth: {
-        api_key: 'MAILGUN_API',
-        domain: 'MAILGUN_DOMAIN'
+        api_key: process.env.MAILGUN_API, 
+        domain:  process.env.MAILGUN_DOMAIN
     }
 }
 
@@ -84,14 +85,14 @@ const transporter = nodemailer.createTransport(mailGun(auth));
 const sendMail = (email, subject, text) => {
     const mailOptions ={
         from: email,
-        to: 'receiver email',
+        to:  process.env.RECEIVING_EMAIL,
         subject: subject,
         text: text
     }
 
     transporter.sendMail(mailOptions, (err, data) => {
         if (err) {
-            return console.log("'Error occurs'");
+            return console.log(err);
         }
         return console.log('Email sent!!!');
     });
