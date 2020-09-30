@@ -24,6 +24,7 @@ app.post('/email', (req, res) =>{
     console.log('Data', req.body);
 
     sendMail(email, subject, text, function(err, data){
+        
         if (err) {
             res.status(500).json({message: 'Internal Error'});
         } else {
@@ -63,6 +64,16 @@ app.get('/contact.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
+// Email sent
+app.get('/sent.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/sent.html'));
+});
+
+// Internal error
+app.get('/error500.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/error500.html'));
+});
+
 // Route not found (404)
 app.use(function(req, res, next) {
   res.status(404).sendFile(path.join(__dirname, 'public/error404.html'));
@@ -82,7 +93,7 @@ const auth = {
 const transporter = nodemailer.createTransport(mailGun(auth));
 
 //Sending Email
-const sendMail = (email, subject, text) => {
+const sendMail = (email, subject, text, cb) => {
     const mailOptions ={
         from: email,
         to:  process.env.RECEIVING_EMAIL,
@@ -92,8 +103,11 @@ const sendMail = (email, subject, text) => {
 
     transporter.sendMail(mailOptions, (err, data) => {
         if (err) {
-            return console.log(err);
+            //return console.log(err);
+            cb(err, null);
+        }else{
+            cb(null, data);
         }
-        return console.log('Email sent!!!');
+        //return console.log('Email sent!!!');
     });
 }
