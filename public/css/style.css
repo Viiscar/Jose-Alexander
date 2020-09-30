@@ -471,8 +471,3 @@ Responsive
     left:37%;
   }
 }
-@media screen and (min-width: 576px) {
-  .slider-container {
-    height: 45vh;
-  }
-}
