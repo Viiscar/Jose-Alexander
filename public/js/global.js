@@ -8,24 +8,29 @@ function showPortfolio(){
     portfolio.style.display = "block";
 
    //set windows width to call function translateX
-   let wind1270px = window.matchMedia("(max-width: 1270px)")
-    translateX(wind1270px); // Call listener function at run time
+   let wind1270px = window.matchMedia("(max-width: 1270px)");
+   let wind760px = window.matchMedia("(max-width: 760px)");
+    translateX(wind1270px,wind760px); // Call listener function at run time
     wind1270px.addListener(translateX) // Attach listener function on state changes
   }
     
 }
 
 //Tranlates Contact & About to the left at 1270px window width
-function translateX(wind1270px) {
+function translateX(wind1270px,wind760px) {  //760px
 
   let contactAbout = document.getElementsByClassName("contactAbout");
   let navLinks = document.getElementById("navLinks");
 
   if (wind1270px.matches) { // If media query matches
-    contactAbout[0].style.transform= "translateX(-11.5rem)";
-    contactAbout[1].style.transform= "translateX(-11.5rem)";
+    contactAbout[0].style.transform= "translateX(-10rem)";
+    contactAbout[1].style.transform= "translateX(-10rem)";
     navLinks.style.transform= "translateX(7rem)";
-  } else {
+  } else if (wind760px.matches) { // If media query matches
+    contactAbout[0].style.transform= "translateX(-9rem)";
+    contactAbout[1].style.transform= "translateX(-9rem)";
+    navLinks.style.transform= "translateX(7rem)";
+  }else {
     contactAbout[0].style.transform= "translateX(0rem)";
     contactAbout[1].style.transform= "translateX(0rem)";
     navLinks.style.transform= "translateX(0rem)";
