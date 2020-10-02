@@ -246,11 +246,17 @@ Page not found
 }
 .error{
   position: absolute;
-  top:30%;
-  left:50%;
+  top:12%;
+  left:20%;
   margin: -25px 0 0 -25px;
   font-size: 1.5rem;
   text-align: center;
+}
+
+.error-img{
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
 }
 /* 
 ==========
@@ -354,6 +360,16 @@ Responsive
     width: 500px;
     height: auto;
   }
+
+  .error{
+    top:20%;
+    left:13%;
+  }
+  
+  .error-img{
+    height: 70%;
+    width: 70%;
+  }
   
 }
 
@@ -428,9 +444,6 @@ Responsive
     height: 100%;
   }
 
-  .error{
-    left:45%;
-  }
 }
 
 @media screen and (max-width: 450px) {
@@ -468,7 +481,4 @@ Responsive
     margin-bottom: 0rem;
   }
 
-  .error{
-    left:37%;
-  }
 }

@@ -70,12 +70,14 @@ if(window.matchMedia("(min-width: 1270px)").matches){
 //Small devices Menu
 function menuIcon(){
 
+  let errorMessage = document.getElementsByClassName("error");
   let navLinks = document.getElementById("navLinks");
   let navContainer = document.getElementById("navContainer");
   let portfolio = document.getElementById("portfolio");
 
   if (navContainer.className === "index-grid-item") {
     navLinks.style.display="block";
+    errorMessage[0].style.display="none";
     navLinks.style.marginBottom="0px";
     navLinks.children[0].style.marginTop="3.2rem";
     navContainer.className += " responsive";
@@ -83,6 +85,7 @@ function menuIcon(){
 
   } else {
     navLinks.style.display="none";
+    errorMessage[0].style.display="block";
     navContainer.className = "index-grid-item";
     portfolio.classList.add("portfolio")
   }
