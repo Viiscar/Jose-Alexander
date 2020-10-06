@@ -77,7 +77,7 @@ function menuIcon(){
 
   if (navContainer.className === "index-grid-item") {
     navLinks.style.display="block";
-    errorMessage[0].style.display="none";
+    errorMessage.length ? errorMessage[0].style.display="none" : "";
     navLinks.style.marginBottom="0px";
     navLinks.children[0].style.marginTop="3.2rem";
     navContainer.className += " responsive";
@@ -85,7 +85,7 @@ function menuIcon(){
 
   } else {
     navLinks.style.display="none";
-    errorMessage[0].style.display="block";
+    errorMessage.length ? errorMessage[0].style.display="block" : "";
     navContainer.className = "index-grid-item";
     portfolio.classList.add("portfolio")
   }
