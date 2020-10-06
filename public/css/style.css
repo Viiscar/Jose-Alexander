@@ -35,6 +35,15 @@ a:active {
   margin-left: 1.5rem;
 }
 
+div[lang] {
+  display: none;
+}
+
+div[lang].lang-match {
+  /* background-color: cornflowerblue; */
+  display: block;
+}
+
 /*
 =============== 
 Nav
@@ -309,6 +318,9 @@ Responsive
     margin-top: 0rem;
     margin-left: 0rem;
     padding-top: 1.2rem;
+  }
+
+  #navLinks div[lang].lang-match{
     display: flex;
     flex-direction: row;
     padding-left: 0rem;
@@ -417,6 +429,10 @@ Responsive
   .grid-container img{
     width: 400px;
     height: auto;
+  }
+
+  #navLinks div[lang].lang-match{
+    display: block;
   }
 
   #navLinks{

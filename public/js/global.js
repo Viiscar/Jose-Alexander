@@ -23,8 +23,8 @@ function translateX(wind1270px,wind760px) {  //760px
   let navLinks = document.getElementById("navLinks");
 
   if (wind1270px.matches) { // If media query matches
-    contactAbout[0].style.transform= "translateX(-10rem)";
-    contactAbout[1].style.transform= "translateX(-10rem)";
+    contactAbout[0].style.transform= "translateX(-9.5rem)";
+    contactAbout[1].style.transform= "translateX(-9.5rem)";
     navLinks.style.transform= "translateX(7rem)";
   } else if (wind760px.matches) { // If media query matches
     contactAbout[0].style.transform= "translateX(-9rem)";
