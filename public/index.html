@@ -17,8 +17,6 @@
                 </a>
                 <ul id= "navLinks">
                     <div lang="es">
-                        <!-- <button data-key="btn-yes">DEFAULT</button>
-                        <button data-key="btn-no">DEFAULT</button> -->
                         <li><a data-key="home" href="index.html" class="active">HOME</a></li>
                         <li><a data-key="portfolio" onclick="showPortfolio()" >PORTFOLIO</a></li>
                         <ul id="portfolio" class="portfolio">
@@ -29,10 +27,9 @@
                         </ul>
                         <li class="contactAbout"><a data-key="about"href="about.html">ABOUT</a></li>
                         <li class="contactAbout"><a data-key="contact" href="contact.html">CONTACT</a><li>
+                        <li class="contactAbout"><a onclick='changeLang("en")'>lang</a><li>
                     </div>
                     <div lang="en">
-                        <!-- <button data-key="btn-yes">DEFAULT</button>
-                        <button data-key="btn-no">DEFAULT</button> -->
                         <li><a data-key="home" href="index.html" class="active">HOME</a></li>
                         <li><a data-key="portfolio" onclick="showPortfolio()" >PORTFOLIO</a></li>
                         <ul id="portfolio" class="portfolio">
@@ -43,6 +40,7 @@
                         </ul>
                         <li class="contactAbout"><a data-key="about" href="about.html">ABOUT</a></li>
                         <li class="contactAbout"><a data-key="contact" href="contact.html">CONTACT</a><li>
+                        <li class="contactAbout"><a onclick='changeLang("es")'>lang</a><li>
                     </div>
                 </ul>
                 <div href="javascript:void(0)" id="menuIcon" onclick="menuIcon()">
