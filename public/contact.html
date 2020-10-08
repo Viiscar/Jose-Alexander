@@ -37,22 +37,22 @@
             <div class="bar3"></div>
           </div>
         </nav>
-        <div class="formContainer">
-            <p class="title">CONTACT</p>
+        <div class="formContainer langToChange" lang="es">
+            <p data-key="contact" class="title">CONTACT</p>
             <form>
                 <div class="formElement">
                   <label for="email">Email:</label>
-                  <input type="email" id="email" placeholder="Enter email address" name="email" required>
+                  <input data-placeholderKey="enterEmail" type="email" id="email" placeholder="Enter email address" name="email" required>
                 </div>
                 <div class="formElement">
-                  <label for="subject">Subject:</label>
-                  <input type="text" id="subject" placeholder="Enter subject" name="pswd" required>
+                  <label data-key="subject" for="subject">Subject:</label>
+                  <input data-placeholderKey="enterSubject" type="text" id="subject" placeholder="Enter subject" name="pswd" required>
                 </div>
                 <div class="formElement">
-                    <label for="message">Message:</label>
-                    <textarea rows="10" id="text" required placeholder="Please include : locations of the project, amount of images needed, intended usage of the images, timeframe for project completion"></textarea>
+                    <label data-key="message" for="message">Message:</label>
+                    <textarea data-placeholderKey="messageDetails" rows="10" id="text" required placeholder="Please include : locations of the project, amount of images needed, intended usage of the images, timeframe for project completion"></textarea>
                 </div>
-                <button class="submit" type="submit">Submit</button>
+                <button data-key="submit" class="submit" type="submit">Submit</button>
               </form>
         </div>
       </div>
