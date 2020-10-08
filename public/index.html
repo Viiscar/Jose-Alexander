@@ -16,7 +16,7 @@
                     <div id="logoContainer"><img src="Images/logo.jpg" id="logo" /></div>
                 </a>
                 <ul id= "navLinks">
-                    <div lang="es">
+                    <div class="langToChange" lang="es">
                         <li><a data-key="home" href="index.html" class="active">HOME</a></li>
                         <li><a data-key="portfolio" onclick="showPortfolio()" >PORTFOLIO</a></li>
                         <ul id="portfolio" class="portfolio">
@@ -27,20 +27,7 @@
                         </ul>
                         <li class="contactAbout"><a data-key="about"href="about.html">ABOUT</a></li>
                         <li class="contactAbout"><a data-key="contact" href="contact.html">CONTACT</a><li>
-                        <li class="contactAbout"><a onclick='changeLang("en")'>lang</a><li>
-                    </div>
-                    <div lang="en">
-                        <li><a data-key="home" href="index.html" class="active">HOME</a></li>
-                        <li><a data-key="portfolio" onclick="showPortfolio()" >PORTFOLIO</a></li>
-                        <ul id="portfolio" class="portfolio">
-                            <li><a data-key="nature" href="nature.html">nature</a></li>
-                            <li><a data-key="portrait" href="portrait.html">portrait</a></li>
-                            <li><a data-key="events" href="events.html">events</a></li>
-                            <li><a data-key="request" href="byRequest.html">by request</a></li>
-                        </ul>
-                        <li class="contactAbout"><a data-key="about" href="about.html">ABOUT</a></li>
-                        <li class="contactAbout"><a data-key="contact" href="contact.html">CONTACT</a><li>
-                        <li class="contactAbout"><a onclick='changeLang("es")'>lang</a><li>
+                        <li class="contactAbout"><a onclick='changeLang()'>lang</a><li>
                     </div>
                 </ul>
                 <div href="javascript:void(0)" id="menuIcon" onclick="menuIcon()">

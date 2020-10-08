@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg="es">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,16 +17,19 @@
                     <div id="logoContainer"><img src="Images/logo.jpg" id="logo" /></div>
                 </a>
                 <ul id= "navLinks">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a onclick="showPortfolio()" >PORTFOLIO</a></li>
-                    <ul id="portfolio" class="portfolio">
-                        <li><a href="nature.html">nature</a></li>
-                        <li><a href="portrait.html">portrait</a></li>
-                        <li><a href="events.html">events</a></li>
-                        <li><a href="byRequest.html">by request</a></li>
-                    </ul>
-                    <li class="contactAbout"><a href="about.html" class="active">ABOUT</a></li>
-                    <li class="contactAbout"><a href="contact.html">CONTACT</a><li>
+                    <div class="langToChange" lang="es">
+                        <li><a data-key="home" href="index.html">HOME</a></li>
+                        <li><a data-key="portfolio" onclick="showPortfolio()" >PORTFOLIO</a></li>
+                        <ul id="portfolio" class="portfolio">
+                            <li><a data-key="nature" href="nature.html">nature</a></li>
+                            <li><a data-key="portrait" href="portrait.html">portrait</a></li>
+                            <li><a data-key="events" href="events.html">events</a></li>
+                            <li><a data-key="request" href="byRequest.html">by request</a></li>
+                        </ul>
+                        <li class="contactAbout"><a data-key="about"href="about.html" class="active">ABOUT</a></li>
+                        <li class="contactAbout"><a data-key="contact" href="contact.html">CONTACT</a><li>
+                        <li class="contactAbout"><a onclick='changeLang()'>lang</a><li>
+                    </div>
                 </ul>
                 <div href="javascript:void(0)" id="menuIcon" onclick="menuIcon()">
                     <div class="bar1"></div>
@@ -45,4 +48,5 @@
         </div>
     </body>
     <script src="/js/global.js"></script>
+    <script src="/js/multilingual.js"></script>
 </html>

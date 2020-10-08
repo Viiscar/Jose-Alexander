@@ -37,7 +37,6 @@ let langdata = {
         }else{//If localStorage is full
              const lang = localStorage.getItem('lang');
              const parsedLang = JSON.parse(lang);
-             console.log("parsedLang",parsedLang);
              setLanguage(parsedLang);
         }
     }else{//if there is no Storage feature
@@ -48,15 +47,24 @@ let langdata = {
 
 //Setting language on load
 function setLanguage(storage){
-    let zones = document.querySelectorAll('html [lang]');
-    applyStrings(zones);
+    
     let lang;
     storage ?  lang = storage: lang = findLocaleMatch()
-    let container = document.querySelector(`html [lang*=${lang}]`);
-    console.log(container);
-    container.className = 'lang-match';
+
+    let langToChange = document.getElementsByClassName("langToChange");
+    for (i=0; i<langToChange.length; i++){
+
+        langToChange[i].setAttribute("lang", lang)
+        
+        langToChange[i].classList.add('lang-match');
+        //changeLang.length === 0 ? i++ : "";
+    }
+
+    let zones = document.querySelectorAll('html [lang]');
+    applyStrings(zones);
 }
 
+//Changes language
 function applyStrings(containers) {
     containers.forEach(container => {
         //find all the elements that have data-key
@@ -71,13 +79,13 @@ function applyStrings(containers) {
     })
 }
 
+//Defines Language to use
 function findLocaleMatch() {
     let keys = Object.keys(langdata.languages); //from our data
     let locales = Intl.getCanonicalLocales(keys); //from our data validated
     let lang = navigator.language; //from browser 
     let locale = Intl.getCanonicalLocales(lang); //from browser validated
-    console.log('browser language', lang);
-    console.log('locales from data file', locale);
+
     //find the match for locale inside locales
     let langMatch = document.documentElement.getAttribute('lang'); //default
     locales = locales.filter(l => locale == l);
@@ -85,14 +93,25 @@ function findLocaleMatch() {
     return langMatch;
 }
 
-function changeLang(lang){
+//Changes Language on click
+function changeLang(){
+
+    //Changing language
+    let langToChange = document.getElementsByClassName("langToChange");
+    let previousLang = langToChange[0].getAttribute("lang");
+    let lang;
+    previousLang === "es" ? lang = "en" : lang = "es";
+
     //Set language selection in localStorage
     if (typeof(Storage) !== "undefined") {
         localStorage.setItem("lang", JSON.stringify(lang));
     }
-    //Changing language
-    let displayedLanguage =  document.getElementsByClassName('lang-match');
-    displayedLanguage[0].classList.remove("lang-match");
-    let container = document.querySelector(`html [lang*=${lang}]`);
-    container.className = 'lang-match';
+    
+    for (i=0; i<langToChange.length; i++){
+        langToChange[i].setAttribute("lang", lang)
+    }
+
+    let zones = document.querySelectorAll('html [lang]');
+    applyStrings(zones);
+    
 }
