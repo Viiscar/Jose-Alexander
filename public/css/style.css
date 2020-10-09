@@ -76,6 +76,20 @@ li{
   display: none;
 }
 
+.vert-bar{
+  background-color: black;
+  height: 0.1rem;
+  width: 9rem;
+}
+
+#lang-button{
+  letter-spacing: 2px;
+}
+
+.lang-color{
+  color: #F8981C;
+}
+
 /*
 =============== 
 Slider
@@ -309,6 +323,9 @@ Responsive
     margin-top: 0rem;
     margin-left: 0rem;
     padding-top: 1.2rem;
+  }
+
+  #navLinks div[lang].langToChange{
     display: flex;
     flex-direction: row;
     padding-left: 0rem;
@@ -342,6 +359,11 @@ Responsive
     border-bottom: 2px solid #F9B358;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+  }
+
+  .vert-bar{
+    height: 1.7rem;
+    width: 0.15rem;
   }
 
   .formContainer{
@@ -408,7 +430,7 @@ Responsive
   }
 }
 
-@media screen and (max-width: 733px) {
+@media screen and (max-width: 756px) {
 
   nav{
     justify-content: space-between;
@@ -417,6 +439,15 @@ Responsive
   .grid-container img{
     width: 400px;
     height: auto;
+  }
+
+  #navLinks div[lang].langToChange{
+    display: block;
+  }
+
+  .vert-bar{
+    height: 0.1rem;
+    width: 9rem;
   }
 
   #navLinks{
