@@ -195,7 +195,9 @@ Contact
  */
 
 .formContainer{
-  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
   margin-left: 8rem;
   margin-right:6rem;
   font-size: 1.3rem;
@@ -236,11 +238,9 @@ ABOUT
  */
 
  .photographer{
-   float: right;
-   height: 30vh;
+   object-fit: cover;
+   height: 50vh;
    width: auto;
-   margin-left: 1rem;
-   margin-bottom: 1rem;
  }
 
  .aboutText{
@@ -368,6 +368,7 @@ Responsive
 
   .formContainer{
     width: 70vw;
+    margin-top: 2rem;
   }
 
   .grid-container {
