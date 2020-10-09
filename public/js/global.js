@@ -21,14 +21,20 @@ function translateX(wind1270px,wind760px) {  //760px
 
   let contactAbout = document.getElementsByClassName("contactAbout");
   let navLinks = document.getElementById("navLinks");
+  let logo = document.getElementById("logo");
 
   if (wind1270px.matches) { // If media query matches
-    contactAbout[0].style.transform= "translateX(-9.5rem)";
-    contactAbout[1].style.transform= "translateX(-9.5rem)";
-    navLinks.style.transform= "translateX(7rem)";
+    logo.style.transform= "translateX(2.8rem)";
+    contactAbout[0].style.transform= "translateX(-10rem)";
+    contactAbout[1].style.transform= "translateX(-10rem)";
+    contactAbout[2].style.transform= "translateX(-10rem)";
+    contactAbout[3].style.transform= "translateX(-10rem)";
+    navLinks.style.transform= "translateX(5.8rem)";
   } else if (wind760px.matches) { // If media query matches
     contactAbout[0].style.transform= "translateX(-9rem)";
     contactAbout[1].style.transform= "translateX(-9rem)";
+    contactAbout[2].style.transform= "translateX(-9rem)";
+    contactAbout[3].style.transform= "translateX(-9rem)";
     navLinks.style.transform= "translateX(7rem)";
   }else {
     contactAbout[0].style.transform= "translateX(0rem)";
@@ -77,7 +83,7 @@ function menuIcon(){
 
   if (navContainer.className === "index-grid-item") {
     navLinks.style.display="block";
-    errorMessage[0].style.display="none";
+    errorMessage.length ? errorMessage[0].style.display="none" : "";
     navLinks.style.marginBottom="0px";
     navLinks.children[0].style.marginTop="3.2rem";
     navContainer.className += " responsive";
@@ -85,7 +91,7 @@ function menuIcon(){
 
   } else {
     navLinks.style.display="none";
-    errorMessage[0].style.display="block";
+    errorMessage.length ? errorMessage[0].style.display="block" : "";
     navContainer.className = "index-grid-item";
     portfolio.classList.add("portfolio")
   }

@@ -7,7 +7,7 @@ let langdata = {
                 "nature": "nature",
                 "portrait": "portrait",
                 "events": "events",
-                "request": "by request",
+                "request": "by"+String.fromCharCode(160)+"request",
                 "about": "ABOUT",
                 "contact": "CONTACT",
                 "about1": "Hi! You will see here a sample of my work through the years, one that started as a hobby and ended up being my greatest expression and passion. It wasn't easy at first but I had the best support ever, that of my wife Betzy, my inspiration and best role model. Dedicated to her memory, because without her this would not have been possible.",
@@ -30,11 +30,11 @@ let langdata = {
             "strings": {
                 "home": "INICIO",
                 "portfolio": "PORTFOLIO",
-                "nature": "naturaleza",
+                "nature": "naturaleza"+String.fromCharCode(160),
                 "portrait": "retrato",
-                "events": "evento",
+                "events": "eventos",
                 "request": "solicitud",
-                "about": "CONOCEME",
+                "about": "ACERCA",
                 "contact": "CONTACTO",
                 "about1": "¡Hola! En este recorrido verán una muestra de mi trabajo a través de los años, uno que empezó como hobby y terminó siendo mi mayor expresión y pasión. No fue fácil al principio pero tuve el mejor apoyo jamás, el de mi esposa Betzy, mi inspiración y mejor modelo. Dedicada a su memoria, pues sin ella esto no hubiera sido posible.",
                 "about2": "Todas las imágenes fueron tomadas con cámara Nikon con lentes Nikkor y Sigma.",
@@ -86,15 +86,14 @@ function setLanguage(storage){
         langToChange[i].setAttribute("lang", lang)
         
         langToChange[i].classList.add('lang-match');
-        //changeLang.length === 0 ? i++ : "";
     }
 
     let zones = document.querySelectorAll('html [lang]');
-    applyStrings(zones);
+    applyStrings(zones,lang);
 }
 
 //Changes language
-function applyStrings(containers) {
+function applyStrings(containers, lang) {
     containers.forEach(container => {
         //find all the elements that have data-key
         let locale = container.getAttribute('lang');
@@ -118,6 +117,19 @@ function applyStrings(containers) {
             }
         });
     })
+
+    //Changes the en/esp button color
+    let langBtn = document.getElementById("lang-button");
+
+    if(lang==="en"){
+        console.log("anglais", lang);
+        langBtn.childNodes[0].classList.add("lang-color");
+        langBtn.childNodes[2].classList.remove("lang-color");
+    }else{
+        console.log("espagnol");
+        langBtn.childNodes[2].classList.add("lang-color");
+        langBtn.childNodes[0].classList.remove("lang-color");
+    }
 }
 
 //Defines Language to use
@@ -153,5 +165,5 @@ function changeLang(){
     }
 
     let zones = document.querySelectorAll('html [lang]');
-    applyStrings(zones);
+    applyStrings(zones, lang);
 }

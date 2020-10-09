@@ -76,6 +76,20 @@ li{
   display: none;
 }
 
+.vert-bar{
+  background-color: black;
+  height: 0.1rem;
+  width: 9rem;
+}
+
+#lang-button{
+  letter-spacing: 2px;
+}
+
+.lang-color{
+  color: #F8981C;
+}
+
 /*
 =============== 
 Slider
@@ -347,6 +361,11 @@ Responsive
     border-bottom-right-radius: 8px;
   }
 
+  .vert-bar{
+    height: 1.7rem;
+    width: 0.15rem;
+  }
+
   .formContainer{
     width: 70vw;
   }
@@ -411,7 +430,7 @@ Responsive
   }
 }
 
-@media screen and (max-width: 733px) {
+@media screen and (max-width: 756px) {
 
   nav{
     justify-content: space-between;
@@ -424,6 +443,11 @@ Responsive
 
   #navLinks div[lang].langToChange{
     display: block;
+  }
+
+  .vert-bar{
+    height: 0.1rem;
+    width: 9rem;
   }
 
   #navLinks{
