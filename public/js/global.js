@@ -67,7 +67,7 @@ wind991px.addListener(changeLogo) // Attach listener function on state changes
 //Portfolio nav links are visible at 1270px width and more for portfolio paths
 if(window.matchMedia("(min-width: 1270px)").matches){
   let currentPath = window.location.pathname;
-  if(currentPath === "/portrait.html" || currentPath === "/nature.html" || currentPath === "/events.html" || currentPath === "/byRequest.html"){
+  if(currentPath === "/portrait.html" || currentPath === "/nature.html" || currentPath === "/events.html" || currentPath === "/byRequest.html" || currentPath === "/drone.html"){
     let portfolio = document.getElementById("portfolio");
     portfolio.style.display = "block";
   }

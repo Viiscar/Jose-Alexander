@@ -9,6 +9,7 @@
         <title>Jose Alexander</title>
         <link rel="icon" type="image/ico" href="/Images/favicon.ico" />
     </head>
+
     <body>
         <div class="index-grid-container">
             <nav id="navContainer" class="index-grid-item">
@@ -17,19 +18,19 @@
                 </a>
                 <ul id= "navLinks">
                     <div class="langToChange" lang="es">
-                        <li><a data-key="home" href="index.html" class="active">HOME</a></li>
+                        <li><a data-key="home" href="index.html">HOME</a></li>
                         <li><a data-key="portfolio" onclick="showPortfolio()" >PORTFOLIO</a></li>
                         <ul id="portfolio" class="portfolio">
                             <li><a data-key="nature" href="nature.html">nature</a></li>
                             <li><a data-key="portrait" href="portrait.html">portrait</a></li>
                             <li><a data-key="events" href="events.html">events</a></li>
-                            <li><a href="drone.html">drone</a></li>
+                            <li><a href="drone.html" class="active">drone</a></li>
                             <li><a data-key="request" href="byRequest.html">by request</a></li>
                         </ul>
                         <li class="contactAbout"><a data-key="about"href="about.html">ABOUT</a></li>
                         <li class="contactAbout"><a data-key="contact" href="contact.html">CONTACT</a><li>
-                        <div class=" contactAbout vert-bar"></div>
-                        <li class="contactAbout"><a id="lang-button" onclick='changeLang()'><span>en</span>/<span>esp</span></a><li>
+                            <div class=" contactAbout vert-bar"></div>
+                            <li class="contactAbout"><a id="lang-button" onclick='changeLang()'><span>en</span>/<span>esp</span></a><li>
                     </div>
                 </ul>
                 <div href="javascript:void(0)" id="menuIcon" onclick="menuIcon()">
@@ -38,30 +39,20 @@
                     <div class="bar3"></div>
                 </div>
             </nav>
-            <div class="index-grid-item" class="slider-container-bis">
-                <div class="slider-container">
-                    <div class="slide">
-                        <img src="Images/Home/1.jpeg" class="slide-img" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="Images/Home/2.jpeg" class="slide-img" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="Images/Home/3.jpeg" class="slide-img" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="Images/Home/4.jpeg" class="slide-img" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="Images/Home/5.jpeg" class="slide-img" alt="" />
-                    </div>
-                    <a onclick="prev()" class="sliderButtons" id="prev"></a>
-                    <a onclick="next()" class="sliderButtons" id="next"></a>
-                </div>
+            <div class="grid-container">
+                <div class="grid-item"><img src="Images/Drone/D1.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D2.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D3.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D4.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D5.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D6.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D7.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D8.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D9.jpeg" class="slide-img" alt="" /></div>
+                <div class="grid-item"><img src="Images/Drone/D10.jpeg" class="slide-img" alt="" /></div>
             </div>
         </div>
-        <script src= "/js/index.js"></script>
-        <script src="/js/global.js"></script>
-        <script src="/js/multilingual.js"></script>
     </body>
+    <script src="/js/global.js"></script>
+    <script src="/js/multilingual.js"></script>
 </html>
