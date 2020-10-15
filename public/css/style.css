@@ -188,6 +188,31 @@ Portfolio
   font-weight: bold;
 }
 
+Iframe {
+  width: 87%;
+  height:auto;
+  }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  margin-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 15px;
+  /* left: 45px; */
+  left: 2.4vw;
+  width: 87%;
+  height: 100%;
+}
+
 /* 
 ===========
 Contact
@@ -292,6 +317,20 @@ Responsive
     width: 500px;
     height: auto;
   }
+
+  Iframe {
+    width: 86%;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 15px;
+    left: 2.5vw;
+    width: 86%;
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 1470px) {
@@ -299,6 +338,20 @@ Responsive
   .grid-container img{
     width: 400px;
     height: auto;
+  }
+
+  Iframe {
+    width: 83%;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 15px;
+    left: 3vw;
+    width: 83%;
+    height: 100%;
   }
 }
 
@@ -384,6 +437,20 @@ Responsive
     height: auto;
   }
 
+  Iframe {
+    width: 93%;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 15px;
+    left: 1.7vw;
+    width: 93%;
+    height: 100%;
+  }
+
   .error{
     top:20%;
     left:13%;
@@ -401,6 +468,22 @@ Responsive
     width: 400px;
     height: auto;
   }
+
+  Iframe {
+    width: 84%;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    margin-top: 20px;
+    top: 15px;
+    left: 3.5vw;
+    width: 84%;
+    height: 100%;
+  }
+  
 }
 
 @media screen and (max-width: 991px) {
@@ -418,6 +501,25 @@ Responsive
   .grid-container img{
     width: 550px;
     height: auto;
+  }
+
+  Iframe {
+    width: 78%;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 40px;
+    left: 11vw;
+    width: 78%;
+    height: 100%;
+  }
+
+  #first-video {
+    margin-top: 0px;
+    padding-top: 0px;
   }
 
   .slider-container {
@@ -494,6 +596,20 @@ Responsive
   .grid-container img{
     width: 300px;
     height: auto;
+  }
+
+  Iframe {
+    width: 88%;
+  }
+  
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    /* top: 15px; */
+    left: 6vw;
+    width: 88%;
+    height: 100%;
   }
 
   .formContainer{
