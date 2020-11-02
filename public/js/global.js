@@ -51,11 +51,11 @@ function changeLogo(wind991px) {
  
   if (wind991px.matches) { // If media query matches
     logo.remove();
-    logoContainer.innerHTML='<img src="Images/logo-mini.jpg" id="logo" />';
+    logoContainer.innerHTML='<img src="Images/logo-mini.jpg" id="logo" alt="logo"/>';
 
   } else {
     logo.remove();
-    logoContainer.innerHTML='<img src="Images/logo.jpg" id="logo" />';
+    logoContainer.innerHTML='<img src="Images/logo.jpg" id="logo" alt="logo"/>';
   }
 }
 
